@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://diqyu7j5lyxw7" path="res://Assets/Furniture/12_Kitchen_16x16.png" id="6_fm4pu"]
 [ext_resource type="Texture2D" uid="uid://dodrxxh0glk5h" path="res://Assets/Furniture/18_Jail_16x16.png" id="7_v67m6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_slwdc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8wqj"]
 texture = ExtResource("1_x354h")
 0:2/0 = 0
 1:2/0 = 0
@@ -361,9 +361,9 @@ texture = ExtResource("1_x354h")
 14:33/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_8tapr"]
-sources/0 = SubResource("TileSetAtlasSource_slwdc")
+sources/0 = SubResource("TileSetAtlasSource_p8wqj")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2u2y1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4504t"]
 texture = ExtResource("2_n4pqh")
 0:0/0 = 0
 1:0/0 = 0
@@ -1182,7 +1182,7 @@ texture = ExtResource("2_n4pqh")
 30:33/0 = 0
 31:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15u2v"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xh4l3"]
 texture = ExtResource("3_h6fmq")
 1:0/0 = 0
 3:0/0 = 0
@@ -1906,10 +1906,10 @@ texture = ExtResource("3_h6fmq")
 10:49/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pvciw"]
-sources/0 = SubResource("TileSetAtlasSource_2u2y1")
-sources/1 = SubResource("TileSetAtlasSource_15u2v")
+sources/0 = SubResource("TileSetAtlasSource_4504t")
+sources/1 = SubResource("TileSetAtlasSource_xh4l3")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a2ctx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7tql6"]
 texture = ExtResource("2_n4pqh")
 0:0/0 = 0
 1:0/0 = 0
@@ -2790,7 +2790,7 @@ texture = ExtResource("2_n4pqh")
 30:33/0 = 0
 31:33/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shmsn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgtbr"]
 texture = ExtResource("4_q0wif")
 0:0/0 = 0
 1:0/0 = 0
@@ -2949,10 +2949,10 @@ texture = ExtResource("4_q0wif")
 40:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_6ytot"]
-sources/0 = SubResource("TileSetAtlasSource_a2ctx")
-sources/1 = SubResource("TileSetAtlasSource_shmsn")
+sources/0 = SubResource("TileSetAtlasSource_7tql6")
+sources/1 = SubResource("TileSetAtlasSource_bgtbr")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l0csq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uou65"]
 texture = ExtResource("4_21byb")
 1:0/0 = 0
 2:0/0 = 0
@@ -4053,7 +4053,7 @@ texture = ExtResource("4_21byb")
 9:77/0 = 0
 10:77/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_00ecx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o20ry"]
 texture = ExtResource("5_54x6u")
 0:0/0 = 0
 1:0/0 = 0
@@ -5559,7 +5559,7 @@ texture = ExtResource("5_54x6u")
 3:108/0 = 0
 4:108/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6nxt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x66g8"]
 texture = ExtResource("6_fm4pu")
 1:0/0 = 0
 2:0/0 = 0
@@ -6294,9 +6294,9 @@ texture = ExtResource("6_fm4pu")
 15:48/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_opl4b"]
-sources/1 = SubResource("TileSetAtlasSource_l0csq")
-sources/2 = SubResource("TileSetAtlasSource_00ecx")
-sources/3 = SubResource("TileSetAtlasSource_j6nxt")
+sources/1 = SubResource("TileSetAtlasSource_uou65")
+sources/2 = SubResource("TileSetAtlasSource_o20ry")
+sources/3 = SubResource("TileSetAtlasSource_x66g8")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fusv0"]
 texture = ExtResource("4_21byb")
@@ -11016,6 +11016,7 @@ sources/5 = SubResource("TileSetAtlasSource_v6vxb")
 [node name="School_Moe\'s Cafe" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 zoom = Vector2(2, 2)
 
 [node name="Floor" type="TileMapLayer" parent="."]
