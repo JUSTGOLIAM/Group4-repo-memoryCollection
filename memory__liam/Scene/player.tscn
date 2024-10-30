@@ -391,9 +391,8 @@ script = ExtResource("1_jgbi8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yuh7i")
-animation = &"walk_Right"
+animation = &"idle_Back"
 autoplay = "walk_Back"
-frame_progress = 0.669421
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
