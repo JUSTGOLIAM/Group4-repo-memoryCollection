@@ -1,0 +1,144 @@
+[gd_scene load_steps=21 format=3 uid="uid://dpciuqi4nsuas"]
+
+[ext_resource type="Texture2D" uid="uid://bhktqyb7i1m8v" path="res://人物动画/Cleaner_boy_clean_16x16.png" id="1_1rmob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b28j"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(0, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ro2pk"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lekl"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(32, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xx1h"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(48, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p31yq"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(64, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrjs2"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(80, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmabe"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(96, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1y7v"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(112, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihcby"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(128, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr17y"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(144, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxw2v"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(160, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scc6u"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(176, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raahw"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(192, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxt8h"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(208, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1di7"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(224, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypvdn"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(240, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7pvn"]
+atlas = ExtResource("1_1rmob")
+region = Rect2(256, 0, 16, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yp3oi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b28j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ro2pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lekl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xx1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p31yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrjs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmabe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1y7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihcby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr17y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxw2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scc6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raahw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxt8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1di7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypvdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7pvn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5f6jh"]
+radius = 5.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yp3oi")
+autoplay = "default"
+frame_progress = 0.966238
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_5f6jh")

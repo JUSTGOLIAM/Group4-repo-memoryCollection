@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3muxacdql6bg"]
+
+[ext_resource type="Texture2D" uid="uid://2ire2axqcwhv" path="res://人物动画/Butcher_2_idle_anim_16x16.png" id="1_gmt66"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyk7g"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(288, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho8o1"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(304, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok1i4"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(320, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eferc"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(336, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vj8u"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(352, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ivpg"]
+atlas = ExtResource("1_gmt66")
+region = Rect2(368, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dklfv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyk7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho8o1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok1i4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eferc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vj8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ivpg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dklfv")
+autoplay = "default"
+frame_progress = 0.666586
