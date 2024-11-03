@@ -387,6 +387,7 @@ animations = [{
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 9
 script = ExtResource("1_jgbi8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

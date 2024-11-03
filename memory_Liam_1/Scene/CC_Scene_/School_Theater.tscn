@@ -1,9 +1,12 @@
-[gd_scene load_steps=13 format=4 uid="uid://dd4n3tieippij"]
+[gd_scene load_steps=19 format=4 uid="uid://dd4n3tieippij"]
 
+[ext_resource type="Script" path="res://Script/school_theater.gd" id="1_4hime"]
 [ext_resource type="Texture2D" uid="uid://dsfjywt774vmx" path="res://Assets/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="1_q03ym"]
 [ext_resource type="Texture2D" uid="uid://dr3f5bow4c01" path="res://Assets/Room_Builder_subfiles/Room_Builder_borders_16x16.png" id="2_8pux1"]
 [ext_resource type="Texture2D" uid="uid://dtydlcqts7j81" path="res://Assets/Room_Builder_subfiles/Room_Builder_Walls_16x16.png" id="3_g2pw0"]
 [ext_resource type="Texture2D" uid="uid://dfdq6iupoek7w" path="res://Assets/Furniture/13_Conference_Hall_16x16.png" id="4_fs3dw"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="5_0t45h"]
+[ext_resource type="PackedScene" uid="uid://yb82bfmpy8eq" path="res://scene_transition_animation.tscn" id="7_xdyq0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eaos4"]
 texture = ExtResource("1_q03ym")
@@ -2442,11 +2445,17 @@ texture = ExtResource("4_fs3dw")
 [sub_resource type="TileSet" id="TileSet_3kipv"]
 sources/0 = SubResource("TileSetAtlasSource_4ixw0")
 
-[node name="Theater" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i37p"]
+size = Vector2(35, 15)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-zoom = Vector2(2, 2)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdjfj"]
+size = Vector2(90, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ap5t"]
+size = Vector2(32, 20)
+
+[node name="Theater" type="Node2D"]
+script = ExtResource("1_4hime")
 
 [node name="Floor" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD0/wAACgANABEAAAD0/wEACgANABEAAAD0/wIACgANABEAAAD0/wMACgANABEAAAD0////CgANABEAAAD0//7/CgANABEAAAA=")
@@ -2496,5 +2505,48 @@ tile_map_data = PackedByteArray("AAD9/wwACQALAAgAAAD+/wsACQALAAcAAAD+/wwACQALAAg
 tile_set = SubResource("TileSet_jfowv")
 
 [node name="Frame" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD2/wAACwAGAAIAAAD2////CwAGAAIAAAD2//7/CwAGAAIAAAD2//3/CwAIAAEAABD3//3/CwAHAAEAAAD4//3/CwAHAAEAAAD5//3/CwAHAAEAAAD6//3/CwAHAAEAAAD7//3/CwAHAAEAAAD8//3/CwAHAAEAAAD9//3/CwAHAAEAAAD+//3/CwAHAAEAAAD///3/CwAHAAEAAAAAAP3/CwAHAAEAAAABAP3/CwAHAAEAAAACAP3/CwAHAAEAAAADAP3/CwAHAAEAAAAEAP3/CwAHAAEAAAAFAP3/CwAHAAEAAAAGAP3/CwAHAAEAAAAHAP3/CwAHAAEAAAAIAP3/CwAHAAEAAAAJAP3/CwAIAAEAAAAJAP7/CwAIAAIAAAAJAP//CwAIAAIAAAAJAAAACwAIAAIAAAAJAAEACwAIAAIAAAAJAAIACwAIAAIAAAAJAAMACwAIAAIAAAAJAAQACwAIAAIAAAAJAAUACwAIAAIAAAAJAAYACwAIAAIAAAAJAAcACwAIAAIAAAAJAAgACwAIAAIAAAAJAAkACwAIAAIAAAAJAAoACwAIAAIAAAAJAAsACwAIAAIAAAAJAAwACwAIAAIAAAAJAA0ACwAIAAIAAAAJAA4ACwAIAAIAAAAJAA8ACwAIAAMAAAAIAA8ACwAHAAMAAAAHAA8ACwAHAAMAAAAGAA8ACwAHAAMAAAAFAA8ACwAHAAMAAAAEAA8ACwAHAAMAAAADAA8ACwAHAAMAAAACAA8ACwAHAAMAAAABAA8ACwAHAAMAAAAAAA8ACwAHAAMAAAD//w8ACwAHAAMAAAD+/w8ACwAHAAMAAAD9/w8ACwAHAAMAAAD8/w8ACwAHAAMAAAD7/w8ACwAHAAMAAAD6/w8ACwAHAAMAAAD5/w8ACwAHAAMAAAD4/w8ACwAHAAMAAAD3/w8ACwAHAAMAAAD2/w8ACwAGAAMAAAD2/w4ACwAGAAIAAAD2/w0ACwAGAAIAAAD2/wwACwAGAAIAAAD2/wsACwAGAAIAAAD2/woACwAGAAIAAAD2/wkACwAGAAIAAAD2/wgACwAGAAIAAAD2/wcACwAEAAEAAAD1/wcACwAHAAEAAAD0/wcACwAHAAEAAADz/wcACwAHAAEAAADy/wcACwAHAAEAAADx/wcACwAGAAMAAADx/wYACwAGAAIAAADx/wUACwAGAAIAAADx/wQACwAGAAIAAADx/wMACwAGAAIAAADx/wIACwAGAAIAAADx/wEACwAGAAEAAADy/wEACwAHAAEAAADz/wEACwACAAEAAAD1/wEACwADAAEAAAD2/wEACwACAAEAAAD1/wAACwADAAAAAADz/wAACwADAAAAABD1////CwAIAAIAAADz////CwAGAAIAAADz//7/CwAGAAIAAAD1//7/CwAGAAIAABA=")
+tile_map_data = PackedByteArray("AAD2/wAACwAGAAIAAAD2////CwAGAAIAAAD2//7/CwAGAAIAAAD2//3/CwAIAAEAABD3//3/CwAHAAEAAAD4//3/CwAHAAEAAAD5//3/CwAHAAEAAAD6//3/CwAHAAEAAAD7//3/CwAHAAEAAAD8//3/CwAHAAEAAAD9//3/CwAHAAEAAAD+//3/CwAHAAEAAAD///3/CwAHAAEAAAAAAP3/CwAHAAEAAAABAP3/CwAHAAEAAAACAP3/CwAHAAEAAAADAP3/CwAHAAEAAAAEAP3/CwAHAAEAAAAFAP3/CwAHAAEAAAAGAP3/CwAHAAEAAAAHAP3/CwAHAAEAAAAIAP3/CwAHAAEAAAAJAP3/CwAIAAEAAAAJAP7/CwAIAAIAAAAJAP//CwAIAAIAAAAJAAAACwAIAAIAAAAJAAEACwAIAAIAAAAJAAIACwAIAAIAAAAJAAMACwAIAAIAAAAJAAQACwAIAAIAAAAJAAUACwAIAAIAAAAJAAYACwAIAAIAAAAJAAcACwAIAAIAAAAJAAgACwAIAAIAAAAJAAkACwAIAAIAAAAJAAoACwAIAAIAAAAJAAsACwAIAAIAAAAJAAwACwAIAAIAAAAJAA0ACwAIAAIAAAAJAA4ACwAIAAIAAAAJAA8ACwAIAAMAAAAIAA8ACwAHAAMAAAAHAA8ACwAHAAMAAAAGAA8ACwAHAAMAAAADAA8ACwAHAAMAAAACAA8ACwAHAAMAAAABAA8ACwAHAAMAAAAAAA8ACwAHAAMAAAD//w8ACwAHAAMAAAD+/w8ACwAHAAMAAAD9/w8ACwAHAAMAAAD8/w8ACwAHAAMAAAD7/w8ACwAHAAMAAAD6/w8ACwAHAAMAAAD5/w8ACwAHAAMAAAD4/w8ACwAHAAMAAAD3/w8ACwAHAAMAAAD2/w8ACwAGAAMAAAD2/w4ACwAGAAIAAAD2/w0ACwAGAAIAAAD2/wwACwAGAAIAAAD2/wsACwAGAAIAAAD2/woACwAGAAIAAAD2/wkACwAGAAIAAAD2/wgACwAGAAIAAAD2/wcACwAEAAEAAAD1/wcACwAHAAEAAAD0/wcACwAHAAEAAADz/wcACwAHAAEAAADy/wcACwAHAAEAAADx/wcACwAGAAMAAADx/wYACwAGAAIAAADx/wUACwAGAAIAAADx/wQACwAGAAIAAADx/wMACwAGAAIAAADx/wIACwAGAAIAAADx/wEACwAGAAEAAADy/wEACwAHAAEAAADz/wEACwACAAEAAAD1/wEACwADAAEAAAD2/wEACwACAAEAAAD1/wAACwADAAAAAADz/wAACwADAAAAABD1////CwAIAAIAAADz////CwAGAAIAAADz//7/CwAGAAIAAAD1//7/CwAGAAIAABA=")
 tile_set = SubResource("TileSet_jfowv")
+
+[node name="Player" parent="." instance=ExtResource("5_0t45h")]
+position = Vector2(-184, 48)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 1)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-192, -31, -192, 48, -225, 48, -225, 112, -145, 113, -144, 240, 146, 241, 145, 79, 144, 43, -128, 43, -127, 48, -175, 48, -175, -38, -194, -34, -199, -64, 131, -125, 201, -81, 216, 43, 207, 240, 159, 285, -85, 285, -213, 287, -188, 169, -238, 126, -266, 23, -225, -39, -202, -36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 68.5)
+shape = SubResource("RectangleShape2D_8i37p")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-64, 127.5)
+shape = SubResource("RectangleShape2D_sdjfj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(63, 184)
+shape = SubResource("RectangleShape2D_sdjfj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(64, 129)
+shape = SubResource("RectangleShape2D_sdjfj")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-64, 184)
+shape = SubResource("RectangleShape2D_sdjfj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 250)
+shape = SubResource("RectangleShape2D_3ap5t")
+
+[node name="SceneTransitionAnimation" parent="." instance=ExtResource("7_xdyq0")]
+position = Vector2(0, 26)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
