@@ -8,7 +8,7 @@ func _physics_process(delta):
 	player_movement(delta)
 	
 
-func player_movement(delta):
+func player_movement(_delta):
 	
 	if Input.is_action_pressed("right"):
 		current_dir = "right"
@@ -72,3 +72,9 @@ func play_anim(movement):
 			anim.play("walk_Back")
 		elif movement == 0:
 			anim.play("idle_Back")
+
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("sss")

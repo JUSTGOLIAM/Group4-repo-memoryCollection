@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://dujhlrb3aaujb"]
+[gd_scene load_steps=15 format=4 uid="uid://dujhlrb3aaujb"]
 
 [ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_iq13c"]
 [ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_7mmn0"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="5_uylnh"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="4_v8j7m"]
+[ext_resource type="PackedScene" uid="uid://dn5g6wityd1xa" path="res://Scene/fish_killer__A.tscn" id="5_0utbr"]
 [ext_resource type="PackedScene" uid="uid://dhtbx8kgfm7wc" path="res://Scene/fish_killer.tscn" id="7_trif6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvsi1"]
@@ -9463,6 +9464,9 @@ texture = ExtResource("2_7mmn0")
 [sub_resource type="TileSet" id="TileSet_s1nnv"]
 sources/0 = SubResource("TileSetAtlasSource_6mmpr")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6j44"]
+radius = 15.0
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -9487,12 +9491,20 @@ scale = Vector2(0.6, 0.6)
 tile_map_data = PackedByteArray("AAD9/wQAAAAAAIYAAAD9/wUAAAAAAIcAAAD9/wYAAAAAAIgAAAD+/wQAAAABAIYAAAD+/wUAAAABAIcAAAD+/wYAAAABAIgAAAD//wQAAAACAIYAAAD//wUAAAACAIcAAAD//wYAAAACAIgAAAAAAAQAAAADAIYAAAAAAAUAAAADAIcAAAAAAAYAAAADAIgAAAABAAUAAAAEAIcAAAACAAUAAAAFAIcAAAADAAUAAAAGAIcAAAADAAYAAAAGAIgAAAAEAAUAAAAHAIcAAAAEAAYAAAAHAIgAAAAFAAUAAAAIAIcAAAAFAAYAAAAIAIgAAAAFAAcAAAAIAIkAAAAGAAUAAAAJAIcAAAAGAAYAAAAJAIgAAAAGAAcAAAAJAIkAAAAHAAUAAAAMAIUAAAD8/wUAAAAFAIUAAAAJAAgAAAAAAIAAAAAJAAkAAAAAAIEAAAAKAAcAAAABAH8AAAAKAAgAAAABAIAAAADy/wUAAAAKAIgAAADy/wYAAAAKAIkAAADy/wcAAAAKAIoAAADz/wUAAAALAIgAAADz/wYAAAALAIkAAADz/wcAAAALAIoAAAD1/wUAAAAKAIgAAAD1/wYAAAAKAIkAAAD1/wcAAAAKAIoAAAD2/wUAAAALAIgAAAD2/wYAAAALAIkAAAD2/wcAAAALAIoAAAA=")
 tile_set = SubResource("TileSet_s1nnv")
 
-[node name="Player" parent="." instance=ExtResource("5_uylnh")]
-position = Vector2(-7, 173)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-visible = false
-zoom = Vector2(4, 4)
-
 [node name="fish_Killer" parent="." instance=ExtResource("7_trif6")]
 position = Vector2(-101, 89)
+dialogue = Array[String](["dfsf", "ff", "vdzzx"])
+
+[node name="Player" parent="." instance=ExtResource("4_v8j7m")]
+position = Vector2(-7, 174)
+
+[node name="Area2D2" type="Area2D" parent="Player"]
+position = Vector2(0, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D2"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_g6j44")
+
+[node name="fish_Killer2" parent="." instance=ExtResource("5_0utbr")]
+position = Vector2(76, 91)
+dialogue = Array[String]([])

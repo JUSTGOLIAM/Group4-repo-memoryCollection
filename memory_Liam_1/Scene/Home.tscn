@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cdiwqkyjtb77r" path="res://Assets/Furniture/4_Bedroom_16x16.png" id="7_f2db2"]
 [ext_resource type="Texture2D" uid="uid://rjmwfhksgayx" path="res://Assets/Furniture/6_Music_and_sport_16x16.png" id="8_8hv87"]
 [ext_resource type="Texture2D" uid="uid://dr3f5bow4c01" path="res://Assets/Room_Builder_subfiles/Room_Builder_borders_16x16.png" id="9_i22jm"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/CC_Scene_/player.tscn" id="10_etet8"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="10_etet8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qao74"]
 texture = ExtResource("1_7ovsq")
@@ -11686,5 +11686,5 @@ tile_set = SubResource("TileSet_1kobg")
 [node name="Player" parent="." instance=ExtResource("10_etet8")]
 position = Vector2(86, 27)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
