@@ -264,7 +264,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_avy2j")
 }],
 "loop": true,
-"name": &"ilde_Left",
+"name": &"idle_Left",
 "speed": 10.0
 }, {
 "frames": [{
@@ -287,7 +287,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3jr88")
 }],
 "loop": true,
-"name": &"ilde_Right",
+"name": &"idle_Right",
 "speed": 10.0
 }, {
 "frames": [{
@@ -392,9 +392,12 @@ radius = 11.0
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_jgbi8")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yuh7i")
-animation = &"idle_Back"
+animation = &"idle_Right"
 autoplay = "walk_Back"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
