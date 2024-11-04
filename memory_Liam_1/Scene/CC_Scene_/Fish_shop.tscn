@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scene/CC_Scene_/fish_shop.gd" id="1_08sgs"]
 [ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_iq13c"]
 [ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_7mmn0"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/CC_Scene_/player.tscn" id="4_v8j7m"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="4_v8j7m"]
 [ext_resource type="PackedScene" uid="uid://dn5g6wityd1xa" path="res://Scene/fish_killer__A.tscn" id="5_0utbr"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="6_0ngr5"]
+[ext_resource type="PackedScene" uid="uid://bwmk6drhdprkb" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="6_0ngr5"]
 [ext_resource type="PackedScene" uid="uid://dhtbx8kgfm7wc" path="res://Scene/fish_killer.tscn" id="7_trif6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvsi1"]
@@ -9499,7 +9499,6 @@ tile_set = SubResource("TileSet_s1nnv")
 
 [node name="fish_Killer" parent="." instance=ExtResource("7_trif6")]
 position = Vector2(-101, 89)
-dialogue = Array[String](["dfsf", "ff", "vdzzx"])
 
 [node name="Player" parent="." instance=ExtResource("4_v8j7m")]
 position = Vector2(-7, 174)
@@ -9513,7 +9512,6 @@ shape = SubResource("CircleShape2D_g6j44")
 
 [node name="fish_Killer2" parent="." instance=ExtResource("5_0utbr")]
 position = Vector2(76, 91)
-dialogue = Array[String](["hello", "Memory"])
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

@@ -15354,8 +15354,9 @@ position = Vector2(88, 283)
 position = Vector2(-158, 284)
 
 [node name="Ghost" parent="." instance=ExtResource("14_sr0sj")]
-position = Vector2(-204, 19)
+position = Vector2(-205, 19)
 scale = Vector2(0.3, 0.3)
+script = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(0.7, 0.7)

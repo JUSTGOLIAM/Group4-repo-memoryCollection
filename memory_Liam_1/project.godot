@@ -13,7 +13,7 @@ config_version=5
 config/name="Memory__Liam"
 run/main_scene="res://Scene/CC_Scene_/Home.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Script/icon.svg"
 
 [dotnet]
 

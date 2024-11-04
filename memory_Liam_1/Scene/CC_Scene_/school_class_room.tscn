@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dkk556hjitlo8"]
+[gd_scene load_steps=21 format=4 uid="uid://dkk556hjitlo8"]
 
 [ext_resource type="Texture2D" uid="uid://civ06wf5o1vb8" path="res://Assets/Furniture/5_Classroom_and_library_16x16.png" id="1_idali"]
 [ext_resource type="Script" path="res://Script/school_classroom.gd" id="1_k2a2u"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://v7mcb0mahvdr" path="res://Assets/Furniture/animated_door_2.png" id="4_s0cvv"]
 [ext_resource type="Texture2D" uid="uid://dsfjywt774vmx" path="res://Assets/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="5_7cq23"]
 [ext_resource type="Texture2D" uid="uid://dfdq6iupoek7w" path="res://Assets/Furniture/13_Conference_Hall_16x16.png" id="6_4ee6e"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/CC_Scene_/player.tscn" id="7_eylxb"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="11_nogqj"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="7_eylxb"]
+[ext_resource type="PackedScene" uid="uid://ctthka1r6j6re" path="res://Scene/classmate_.tscn" id="10_ygdu7"]
+[ext_resource type="PackedScene" uid="uid://bwmk6drhdprkb" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="11_nogqj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_846e7"]
 texture = ExtResource("1_idali")
@@ -2581,5 +2582,9 @@ position = Vector2(-6.66667, -2.5)
 
 [node name="Player" parent="." instance=ExtResource("7_eylxb")]
 position = Vector2(4.16667, 65)
+
+[node name="Classmate_" parent="." instance=ExtResource("10_ygdu7")]
+position = Vector2(9.16667, 106.667)
+scale = Vector2(0.88, 0.88)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

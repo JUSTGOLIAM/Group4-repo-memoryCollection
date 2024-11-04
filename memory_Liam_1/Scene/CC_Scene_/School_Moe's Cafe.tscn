@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://yb56244se1re"]
+[gd_scene load_steps=36 format=4 uid="uid://yb56244se1re"]
 
 [ext_resource type="Script" path="res://Script/school_moe's_cafe.gd" id="1_jtsww"]
 [ext_resource type="Texture2D" uid="uid://dsfjywt774vmx" path="res://Assets/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="1_x354h"]
@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://db3bjw2bok0w0" path="res://Assets/Furniture/19_Hospital_16x16.png" id="5_54x6u"]
 [ext_resource type="Texture2D" uid="uid://diqyu7j5lyxw7" path="res://Assets/Furniture/12_Kitchen_16x16.png" id="6_fm4pu"]
 [ext_resource type="Texture2D" uid="uid://dodrxxh0glk5h" path="res://Assets/Furniture/18_Jail_16x16.png" id="7_v67m6"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/CC_Scene_/player.tscn" id="9_jnxto"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="11_mjbox"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="9_jnxto"]
+[ext_resource type="PackedScene" uid="uid://bwmk6drhdprkb" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="11_mjbox"]
+[ext_resource type="PackedScene" uid="uid://odvgp3a4v7mb" path="res://Scene/chef.tscn" id="12_ixci7"]
+[ext_resource type="PackedScene" uid="uid://b7iau42en3wco" path="res://Scene/classmate_3.tscn" id="13_ym4mc"]
+[ext_resource type="PackedScene" uid="uid://dtduac0qgedup" path="res://Scene/classmate_4.tscn" id="14_kto4l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p8wqj"]
 texture = ExtResource("1_x354h")
@@ -11049,6 +11052,9 @@ tile_set = SubResource("TileSet_pvciw")
 tile_map_data = PackedByteArray("AAD6//n/AQAHAAEAAAD7//n/AQAHAAEAAAD8//n/AQAHAAEAAAD9//n/AQAHAAEAAAD+//n/AQAHAAEAAAD///n/AQAHAAEAAAAAAPn/AQAHAAEAAAABAPn/AQAHAAEAAAACAPn/AQAHAAEAAAADAPn/AQAHAAEAAAAEAPn/AQAHAAEAAAAFAPn/AQAHAAEAAAD5//n/AQAGAAEAAAD5//r/AQAGAAIAAAD5//v/AQAGAAIAAAD5//z/AQAGAAIAAAD5//3/AQAGAAIAAAD5//7/AQAGAAIAAAD5////AQAGAAIAAAD5/wAAAQAGAAIAAAD5/wEAAQAGAAIAAAD5/wIAAQAGAAIAAAD5/wMAAQAAAAEAAAD4/wMAAQAHAAEAAAD3/wMAAQAHAAEAAAD2/wMAAQAHAAEAAAD1/wMAAQAHAAEAAAD0/wMAAQAHAAEAAADz/wMAAQAHAAEAAADy/wMAAQAHAAEAAADx/wMAAQAHAAEAAADw/wMAAQAHAAEAAADv/wMAAQAHAAEAAADv/xAAAQAHAAMAAADw/xAAAQAHAAMAAADx/xAAAQAHAAMAAADy/xAAAQAHAAMAAADz/xAAAQAHAAMAAAD0/xAAAQAHAAMAAAD1/xAAAQAHAAMAAAD2/xAAAQAHAAMAAAD3/xAAAQAHAAMAAAD4/xAAAQAHAAMAAAD5/xAAAQAHAAMAAAD6/xAAAQAHAAMAAAD7/xAAAQAHAAMAAAD8/xAAAQAHAAMAAAD9/xAAAQAHAAMAAAD+/xAAAQAHAAMAAAD//xAAAQAHAAMAAAAEABAAAQAHAAMAAAAFABAAAQAHAAMAAAAGAPn/AQAIAAEAAAAGAPr/AQAIAAIAAAAGAPv/AQAIAAIAAAAGAPz/AQAIAAIAAAAGAP3/AQAIAAIAAAAGAP7/AQAIAAIAAAAGAP//AQAIAAIAAAAGAAAAAQAIAAIAAAAGAAEAAQAIAAIAAAAGAAIAAQAIAAIAAAAGAAMAAQAIAAIAAAAGAAQAAQAIAAIAAAAGAAUAAQAIAAIAAAAGAAYAAQAIAAIAAAAGAAcAAQAIAAIAAAAGAAgAAQAIAAIAAAAGAAkAAQAIAAIAAAAGAAoAAQAIAAIAAAAGAAsAAQAIAAIAAAAGAAwAAQAIAAIAAAAGAA0AAQAIAAIAAAAGAA4AAQAIAAIAAAAGAA8AAQAIAAIAAAAGABAAAQAIAAMAAADu/wMAAQAGAAEAAADu/wQAAQAGAAIAAADu/wUAAQAGAAIAAADu/wYAAQAGAAIAAADu/wcAAQAGAAIAAADu/wgAAQAGAAIAAADu/wkAAQAGAAIAAADu/woAAQAGAAIAAADu/wsAAQAGAAIAAADu/wwAAQAGAAIAAADu/w0AAQAGAAIAAADu/w4AAQAGAAIAAADu/w8AAQAGAAIAAADu/xAAAQAGAAMAAAA=")
 tile_set = SubResource("TileSet_6ytot")
 
+[node name="Chef" parent="." instance=ExtResource("12_ixci7")]
+position = Vector2(-11, 40)
+
 [node name="Furniture1" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD8/wMAAQABAB8AAAD8/wQAAQABACAAAAD9/wMAAQACAB8AAAD9/wQAAQACACAAAAD+/wMAAQACAB8AAAD+/wQAAQACACAAAAD//wMAAQACAB8AAAD//wQAAQACACAAAAAAAAMAAQACAB8AAAAAAAQAAQACACAAAAABAAMAAQACAB8AAAABAAQAAQACACAAAAACAAMAAQACAB8AAAACAAQAAQACACAAAAADAAMAAQACAB8AAAADAAQAAQACACAAAAAEAAMAAQACAB8AAAAEAAQAAQACACAAAAAFAAMAAQACAB8AAAAFAAQAAQACACAAAAD1/wMAAgAEAC0AAAD1/wQAAgAEAC4AAAD1/wUAAgAEAC8AAAD2/wMAAgAFAC0AAAD2/wQAAgAFAC4AAAD2/wUAAgAFAC8AAAD3/wMAAgAEAC0AAAD3/wQAAgAEAC4AAAD3/wUAAgAEAC8AAAD4/wMAAgAFAC0AAAD4/wQAAgAFAC4AAAD4/wUAAgAFAC8AAADy/wMAAgAFACoAAADy/wQAAgAFACsAAADy/wUAAgAFACwAAADx/wMAAgAEACoAAADx/wQAAgAEACsAAADx/wUAAgAEACwAAAA=")
 tile_set = SubResource("TileSet_opl4b")
@@ -11124,5 +11130,11 @@ position = Vector2(0, 8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D2"]
 position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_1undk")
+
+[node name="Classmate_3" parent="." instance=ExtResource("13_ym4mc")]
+position = Vector2(-11, 72)
+
+[node name="Classmate_4" parent="." instance=ExtResource("14_kto4l")]
+position = Vector2(-182, 166)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -21360,7 +21360,7 @@ position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_lr463")
 
 [node name="Cleaner" parent="." instance=ExtResource("10_ppcu8")]
-position = Vector2(-38, -180)
+position = Vector2(-83, -166)
 
 [node name="Little Brother" parent="." instance=ExtResource("10_vulik")]
 position = Vector2(242, 228)

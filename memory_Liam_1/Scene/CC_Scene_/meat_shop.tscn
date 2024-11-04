@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://cwygwjnm5rhjg"]
+[gd_scene load_steps=16 format=4 uid="uid://cwygwjnm5rhjg"]
 
 [ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_dopcd"]
 [ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_8lscq"]
-[ext_resource type="PackedScene" uid="uid://rk1y6mji221i" path="res://Scene/CC_Scene_Character/卖肉的人.tscn" id="3_3meqv"]
+[ext_resource type="PackedScene" uid="uid://dds6oh7t51mq" path="res://Scene/butcher_1.tscn" id="3_chnox"]
 [ext_resource type="PackedScene" path="res://Scene/CC_Scene_Character/肉.tscn" id="4_4ob3a"]
+[ext_resource type="PackedScene" uid="uid://5inigq4nx0uk" path="res://Scene/butcher_2.tscn" id="4_g5gta"]
 [ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="5_4njax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt6ws"]
@@ -9481,11 +9482,11 @@ scale = Vector2(0.7, 0.7)
 tile_map_data = PackedByteArray("AADz/wAAAAAAAHEAAADz/wEAAAAAAHIAAADz/wIAAAAAAHMAAAD0/wAAAAABAHEAAAD0/wEAAAABAHIAAAD0/wIAAAABAHMAAAD1/wAAAAAKAHEAAAD1/wEAAAAKAHIAAAD1/wIAAAAKAHMAAAD2/wAAAAALAHEAAAD2/wEAAAALAHIAAAD2/wIAAAALAHMAAAD3/wAAAAAKAHEAAAD3/wEAAAAKAHIAAAD3/wIAAAAKAHMAAAD4/wAAAAALAHEAAAD4/wEAAAALAHIAAAD4/wIAAAALAHMAAAD5/wAAAAAKAHEAAAD5/wEAAAAKAHIAAAD5/wIAAAAKAHMAAAD6/wAAAAALAHEAAAD6/wEAAAALAHIAAAD6/wIAAAALAHMAAAD7/wAAAAAKAHEAAAD7/wEAAAAKAHIAAAD7/wIAAAAKAHMAAAD8/wAAAAALAHEAAAD8/wEAAAALAHIAAAD8/wIAAAALAHMAAAD9/wAAAAAIAHEAAAD9/wEAAAAIAHIAAAD9/wIAAAAIAHMAAAD+/wAAAAAJAHEAAAD+/wEAAAAJAHIAAAD+/wIAAAAJAHMAAAABAAAAAAAAAHEAAAABAAEAAAAAAHIAAAABAAIAAAAAAHMAAAACAAAAAAABAHEAAAACAAEAAAABAHIAAAACAAIAAAABAHMAAAADAAAAAAAKAHEAAAADAAEAAAAKAHIAAAADAAIAAAAKAHMAAAAEAAAAAAALAHEAAAAEAAEAAAALAHIAAAAEAAIAAAALAHMAAAAFAAAAAAAKAHEAAAAFAAEAAAAKAHIAAAAFAAIAAAAKAHMAAAAGAAAAAAALAHEAAAAGAAEAAAALAHIAAAAGAAIAAAALAHMAAAAHAAAAAAAKAHEAAAAHAAEAAAAKAHIAAAAHAAIAAAAKAHMAAAAIAAAAAAALAHEAAAAIAAEAAAALAHIAAAAIAAIAAAALAHMAAAAJAAAAAAAKAHEAAAAJAAEAAAAKAHIAAAAJAAIAAAAKAHMAAAAKAAAAAAALAHEAAAAKAAEAAAALAHIAAAAKAAIAAAALAHMAAAALAAAAAAAIAHEAAAALAAEAAAAIAHIAAAALAAIAAAAIAHMAAAAMAAAAAAAJAHEAAAAMAAEAAAAJAHIAAAAMAAIAAAAJAHMAAAAHAPz/AAAMAGcAAAAHAP3/AAAMAGgAAAAHAP7/AAAMAGkAAAAIAPz/AAANAGcAAAAIAP3/AAANAGgAAAAIAP7/AAANAGkAAAAFAPz/AAAKAGcAAAAFAP3/AAAKAGgAAAAFAP7/AAAKAGkAAAAGAPz/AAALAGcAAAAGAP3/AAALAGgAAAAGAP7/AAALAGkAAAD2//z/AAAKAGcAAAD2//3/AAAKAGgAAAD2//7/AAAKAGkAAAD3//z/AAALAGcAAAD3//3/AAALAGgAAAD3//7/AAALAGkAAAD4//z/AAAMAGcAAAD4//3/AAAMAGgAAAD4//7/AAAMAGkAAAD5//z/AAANAGcAAAD5//3/AAANAGgAAAD5//7/AAANAGkAAAA=")
 tile_set = SubResource("TileSet_3mtci")
 
-[node name="CharacterBody111" parent="TileMap" instance=ExtResource("3_3meqv")]
-position = Vector2(29, -17)
+[node name="Butcher_1" parent="TileMap" instance=ExtResource("3_chnox")]
+position = Vector2(-56, -19)
 
-[node name="CharacterBody2D3" parent="TileMap" instance=ExtResource("3_3meqv")]
-position = Vector2(-46, -16)
+[node name="Butcher_2" parent="TileMap" instance=ExtResource("4_g5gta")]
+position = Vector2(35, -19)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
 scale = Vector2(0.7, 0.7)

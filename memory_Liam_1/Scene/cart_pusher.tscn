@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://c4v4dehvamprd"]
 
-[ext_resource type="Script" path="res://cart_pusher.gd" id="1_mwhjy"]
+[ext_resource type="Script" path="res://Script/cart_pusher.gd" id="1_mwhjy"]
 [ext_resource type="Texture2D" uid="uid://brjcw2x5ltsg6" path="res://Assets/CC_Assets/人物Assets/Fishmonger_2_idle_anim_16x16.png" id="2_aaddx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_un751"]
@@ -59,7 +59,7 @@ radius = 4.12311
 [sub_resource type="CircleShape2D" id="CircleShape2D_d2j42"]
 radius = 16.0312
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hloi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o3bs"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 4
 border_width_top = 4
@@ -71,12 +71,13 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="LabelSettings" id="LabelSettings_6mloi"]
+[sub_resource type="LabelSettings" id="LabelSettings_i1jj7"]
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [node name="Cart_pusher" type="Node2D"]
 script = ExtResource("1_mwhjy")
+dialogue = Array[String](["", "Cart Pusher: ", "Player: ", "Cart Pusher: "])
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -94,6 +95,9 @@ shape = SubResource("CircleShape2D_vld1a")
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_d2j42")
 
+[node name="Memory11" type="Marker2D" parent="."]
+position = Vector2(33, 6)
+
 [node name="DialogueBox" type="CanvasLayer" parent="."]
 visible = false
 
@@ -102,22 +106,21 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -53.0
+offset_top = -105.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_7hloi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2o3bs")
 
 [node name="Text" type="Label" parent="DialogueBox/PanelContainer"]
+custom_minimum_size = Vector2(60, 30)
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Love you!"
-label_settings = SubResource("LabelSettings_6mloi")
-
-[node name="Memory11" type="Marker2D" parent="."]
-position = Vector2(38, 9)
+text = "Hi! How are you?"
+label_settings = SubResource("LabelSettings_i1jj7")
+autowrap_mode = 3
+text_direction = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -6,22 +6,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ro7kb"]
 radius = 16.0312
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16avy"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="LabelSettings" id="LabelSettings_w7sqm"]
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_pnsrd"]
 atlas = ExtResource("2_e2x4v")
 region = Rect2(288, 32, 16, 32)
@@ -75,9 +59,25 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_cql54"]
 radius = 6.0
 
-[node name="fish_Killer" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqr88"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ahp6"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="Fishmonger" type="Node2D"]
 script = ExtResource("1_5kmmx")
-dialogue = Array[String](["gsa", "gra"])
+dialogue = Array[String](["", "Fishmonger: You’d stop to ask about every type of fish we had.", "Player: Fascinated by the colors, the textures.", "Fishmonger: hat curiosity… it’s something I rarely see."])
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -85,27 +85,9 @@ dialogue = Array[String](["gsa", "gra"])
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_ro7kb")
 
-[node name="DialogueBox" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="PanelContainer" type="PanelContainer" parent="DialogueBox"]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -53.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_16avy")
-
-[node name="Text" type="Label" parent="DialogueBox/PanelContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Hello, gave me a fish!!!!"
-label_settings = SubResource("LabelSettings_w7sqm")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 61)
+shape = SubResource("CircleShape2D_ro7kb")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -118,7 +100,31 @@ position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_cql54")
 
 [node name="Memory11" type="Marker2D" parent="."]
-position = Vector2(38, 9)
+position = Vector2(32, 8)
+
+[node name="DialogueBox" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogueBox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -105.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqr88")
+
+[node name="Text" type="Label" parent="DialogueBox/PanelContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Hi! How are you?"
+label_settings = SubResource("LabelSettings_5ahp6")
+autowrap_mode = 3
+text_direction = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

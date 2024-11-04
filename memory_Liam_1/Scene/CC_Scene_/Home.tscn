@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://g76x16enumau"]
+[gd_scene load_steps=42 format=4 uid="uid://g76x16enumau"]
 
 [ext_resource type="Texture2D" uid="uid://dsfjywt774vmx" path="res://Assets/Room_Builder_subfiles/Room_Builder_Floors_16x16.png" id="1_7ovsq"]
 [ext_resource type="Script" path="res://Script/home.gd" id="1_o0v4d"]
@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cdiwqkyjtb77r" path="res://Assets/Furniture/4_Bedroom_16x16.png" id="7_f2db2"]
 [ext_resource type="Texture2D" uid="uid://rjmwfhksgayx" path="res://Assets/Furniture/6_Music_and_sport_16x16.png" id="8_8hv87"]
 [ext_resource type="Texture2D" uid="uid://dr3f5bow4c01" path="res://Assets/Room_Builder_subfiles/Room_Builder_borders_16x16.png" id="9_i22jm"]
-[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/CC_Scene_/player.tscn" id="10_etet8"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="12_f2ibp"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="10_etet8"]
+[ext_resource type="PackedScene" uid="uid://cuneahvutcsb2" path="res://Scene/father.tscn" id="11_sqwhg"]
+[ext_resource type="PackedScene" uid="uid://bwmk6drhdprkb" path="res://Scene/CC_Scene_/scene_transition_animation.tscn" id="12_f2ibp"]
+[ext_resource type="PackedScene" uid="uid://ip61ox8624oo" path="res://Scene/mother.tscn" id="12_nnjou"]
+[ext_resource type="PackedScene" uid="uid://dpc5uu3r0tqs5" path="res://Scene/brother.tscn" id="13_iaqto"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qao74"]
 texture = ExtResource("1_7ovsq")
@@ -11718,6 +11721,15 @@ tile_set = SubResource("TileSet_qgwaa")
 [node name="Frame2" type="TileMapLayer" parent="TileMap"]
 tile_map_data = PackedByteArray("AAD7//n/AAAHAAEAAAD8//n/AAAHAAEAAAD9//n/AAAHAAEAAAD+//n/AAAHAAEAAAD///n/AAAHAAEAAAAAAPn/AAAHAAEAAAABAPn/AAAHAAEAAAACAPn/AAAHAAEAAAADAPn/AAAHAAEAAAD6//n/AAAHAAEAAAAFAPn/AAAHAAEAAAAEAPn/AAAHAAEAAAD5//n/AAAGAAEAAAD5//r/AAAGAAIAAAD5//v/AAAGAAIAAAD5//z/AAAGAAIAAAD5//3/AAAGAAIAAAD5//7/AAAGAAIAAAD5////AAAGAAIAAAD5/wAAAAAGAAIAAAD5/wEAAAAGAAIAAAD5/wIAAAAGAAIAAAD5/wMAAAAGAAIAAAD5/wQAAAAGAAIAAAD5/wcAAAAGAAIAAAD5/wgAAAAGAAIAAAD6/wkAAAAHAAMAAAD7/wkAAAAHAAMAAAD8/wkAAAAHAAMAAAD+/wkAAAAHAAMAAAD//wkAAAAHAAMAAAAAAAkAAAAHAAMAAAABAAkAAAAHAAMAAAACAAkAAAAHAAMAAAADAAkAAAAHAAMAAAAEAAkAAAAHAAMAAAAFAAkAAAAHAAMAAAD5/wkAAAAGAAMAAAAGAAkAAAAHAAMAAAD9/wkAAAAHAAMAAAD6/wUAAAAHAAEAAAD7/wUAAAAHAAEAAAD8/wUAAAAHAAEAAAD9/wUAAAAHAAEAAAD+/wUAAAAHAAEAAAD//wUAAAAHAAEAAAAAAAUAAAAHAAEAAAABAAUAAAACAAEAAAAHAAkAAAAHAAMAAAAIAAkAAAAHAAMAAAAJAAkAAAAHAAMAAAAHAPn/AAAHAAEAAAAIAPn/AAAHAAEAAAAJAPn/AAAHAAEAAAAKAPn/AAAHAAEAAAALAPn/AAAIAAEAAAALAPr/AAAIAAIAAAALAPv/AAAIAAIAAAALAPz/AAAIAAIAAAALAP3/AAAIAAIAAAALAP7/AAAIAAIAAAALAAEAAAAIAAIAAAALAAIAAAAIAAIAAAALAAMAAAAIAAIAAAALAAYAAAAIAAIAAAALAAQAAAAIAAIAAAALAAUAAAAIAAIAAAALAAcAAAAIAAIAAAALAAgAAAAIAAIAAAALAAkAAAAIAAMAAAAKAAkAAAAHAAMAAAAGAPn/AAAHAAEAAAD5/wUAAAAGAAIAAAD5/wYAAAAGAAIAAAA=")
 tile_set = SubResource("TileSet_1kobg")
+
+[node name="Father" parent="TileMap" instance=ExtResource("11_sqwhg")]
+position = Vector2(85.8333, 112.5)
+
+[node name="Mother" parent="TileMap" instance=ExtResource("12_nnjou")]
+position = Vector2(113.333, 40)
+
+[node name="Brother" parent="TileMap" instance=ExtResource("13_iaqto")]
+position = Vector2(149.167, -45)
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
