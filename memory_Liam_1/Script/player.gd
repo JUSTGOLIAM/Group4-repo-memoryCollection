@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 100.0
 var current_dir = "none"
@@ -76,5 +76,6 @@ func play_anim(movement):
 
 
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+
+func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	print("sss")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://ee7flis36o8s"]
+[gd_scene load_steps=14 format=4 uid="uid://bjial3p2p4hah"]
 
-[ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_oturq"]
-[ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_01jnp"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_Character/卖肉的人.tscn" id="3_72ani"]
-[ext_resource type="PackedScene" path="res://Scene/CC_Scene_Character/肉.tscn" id="4_x2crw"]
+[ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_dopcd"]
+[ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_8lscq"]
+[ext_resource type="PackedScene" uid="uid://d3muxacdql6bg" path="res://Scene/CC_Scene_Character/卖肉的人.tscn" id="3_3meqv"]
+[ext_resource type="PackedScene" uid="uid://b0xhhp60on1nl" path="res://Scene/CC_Scene_Character/肉.tscn" id="4_4ob3a"]
+[ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="5_4njax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt6ws"]
-texture = ExtResource("1_oturq")
+texture = ExtResource("1_dopcd")
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
@@ -1874,7 +1875,7 @@ texture = ExtResource("1_oturq")
 sources/0 = SubResource("TileSetAtlasSource_wt6ws")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwauf"]
-texture = ExtResource("2_01jnp")
+texture = ExtResource("2_8lscq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -4404,7 +4405,7 @@ texture = ExtResource("2_01jnp")
 sources/0 = SubResource("TileSetAtlasSource_gwauf")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_68gtp"]
-texture = ExtResource("2_01jnp")
+texture = ExtResource("2_8lscq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -6935,7 +6936,7 @@ texture = ExtResource("2_01jnp")
 sources/0 = SubResource("TileSetAtlasSource_68gtp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sy53w"]
-texture = ExtResource("2_01jnp")
+texture = ExtResource("2_8lscq")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -9466,9 +9467,6 @@ sources/0 = SubResource("TileSetAtlasSource_sy53w")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -1)
 tile_set = SubResource("TileSet_oqk7u")
@@ -9480,10 +9478,10 @@ scale = Vector2(0.7, 0.7)
 tile_map_data = PackedByteArray("AADz/wAAAAAAAHEAAADz/wEAAAAAAHIAAADz/wIAAAAAAHMAAAD0/wAAAAABAHEAAAD0/wEAAAABAHIAAAD0/wIAAAABAHMAAAD1/wAAAAAKAHEAAAD1/wEAAAAKAHIAAAD1/wIAAAAKAHMAAAD2/wAAAAALAHEAAAD2/wEAAAALAHIAAAD2/wIAAAALAHMAAAD3/wAAAAAKAHEAAAD3/wEAAAAKAHIAAAD3/wIAAAAKAHMAAAD4/wAAAAALAHEAAAD4/wEAAAALAHIAAAD4/wIAAAALAHMAAAD5/wAAAAAKAHEAAAD5/wEAAAAKAHIAAAD5/wIAAAAKAHMAAAD6/wAAAAALAHEAAAD6/wEAAAALAHIAAAD6/wIAAAALAHMAAAD7/wAAAAAKAHEAAAD7/wEAAAAKAHIAAAD7/wIAAAAKAHMAAAD8/wAAAAALAHEAAAD8/wEAAAALAHIAAAD8/wIAAAALAHMAAAD9/wAAAAAIAHEAAAD9/wEAAAAIAHIAAAD9/wIAAAAIAHMAAAD+/wAAAAAJAHEAAAD+/wEAAAAJAHIAAAD+/wIAAAAJAHMAAAABAAAAAAAAAHEAAAABAAEAAAAAAHIAAAABAAIAAAAAAHMAAAACAAAAAAABAHEAAAACAAEAAAABAHIAAAACAAIAAAABAHMAAAADAAAAAAAKAHEAAAADAAEAAAAKAHIAAAADAAIAAAAKAHMAAAAEAAAAAAALAHEAAAAEAAEAAAALAHIAAAAEAAIAAAALAHMAAAAFAAAAAAAKAHEAAAAFAAEAAAAKAHIAAAAFAAIAAAAKAHMAAAAGAAAAAAALAHEAAAAGAAEAAAALAHIAAAAGAAIAAAALAHMAAAAHAAAAAAAKAHEAAAAHAAEAAAAKAHIAAAAHAAIAAAAKAHMAAAAIAAAAAAALAHEAAAAIAAEAAAALAHIAAAAIAAIAAAALAHMAAAAJAAAAAAAKAHEAAAAJAAEAAAAKAHIAAAAJAAIAAAAKAHMAAAAKAAAAAAALAHEAAAAKAAEAAAALAHIAAAAKAAIAAAALAHMAAAALAAAAAAAIAHEAAAALAAEAAAAIAHIAAAALAAIAAAAIAHMAAAAMAAAAAAAJAHEAAAAMAAEAAAAJAHIAAAAMAAIAAAAJAHMAAAAHAPz/AAAMAGcAAAAHAP3/AAAMAGgAAAAHAP7/AAAMAGkAAAAIAPz/AAANAGcAAAAIAP3/AAANAGgAAAAIAP7/AAANAGkAAAAFAPz/AAAKAGcAAAAFAP3/AAAKAGgAAAAFAP7/AAAKAGkAAAAGAPz/AAALAGcAAAAGAP3/AAALAGgAAAAGAP7/AAALAGkAAAD2//z/AAAKAGcAAAD2//3/AAAKAGgAAAD2//7/AAAKAGkAAAD3//z/AAALAGcAAAD3//3/AAALAGgAAAD3//7/AAALAGkAAAD4//z/AAAMAGcAAAD4//3/AAAMAGgAAAD4//7/AAAMAGkAAAD5//z/AAANAGcAAAD5//3/AAANAGgAAAD5//7/AAANAGkAAAA=")
 tile_set = SubResource("TileSet_3mtci")
 
-[node name="CharacterBody2D4" parent="TileMap" instance=ExtResource("3_72ani")]
+[node name="CharacterBody2D4" parent="TileMap" instance=ExtResource("3_3meqv")]
 position = Vector2(81, -19)
 
-[node name="CharacterBody2D3" parent="TileMap" instance=ExtResource("3_72ani")]
+[node name="CharacterBody2D3" parent="TileMap" instance=ExtResource("3_3meqv")]
 position = Vector2(-89, -19)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
@@ -9496,8 +9494,23 @@ scale = Vector2(0.7, 0.7)
 tile_map_data = PackedByteArray("AAD4//v/AAAOAG4AAAD4//z/AAAOAG8AAAD4//3/AAAOAHAAAAD5//v/AAAPAG4AAAD5//z/AAAPAG8AAAD5//3/AAAPAHAAAAAHAPv/AAAMAG4AAAAHAPz/AAAMAG8AAAAHAP3/AAAMAHAAAAAIAPv/AAANAG4AAAAIAPz/AAANAG8AAAAIAP3/AAANAHAAAAA=")
 tile_set = SubResource("TileSet_atrt5")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_x2crw")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_4ob3a")]
 position = Vector2(-128, -45)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("4_x2crw")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_4ob3a")]
 position = Vector2(123, -45)
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-145, 32, -14, 31, -12, -7, -83, -8, -82, -14, -68, -14, -66, -34, 57, -34, 59, -9, 12, -9, 13, 31, 147, 33, 145, 80, -144, 79, -144, 36, -161, 40, -169, 77, -105, 146, 236, 132, 219, -64, 159, -125, -19, -128, -156, -123, -162, -42, -162, 17)
+
+[node name="Player" parent="." instance=ExtResource("5_4njax")]
+position = Vector2(-41, 61)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 1)
+zoom = Vector2(4, 4)

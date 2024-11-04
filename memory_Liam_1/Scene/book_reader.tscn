@@ -1,80 +1,81 @@
-[gd_scene load_steps=22 format=3 uid="uid://c8iid8bvgl08s"]
+[gd_scene load_steps=26 format=3 uid="uid://dyp2sm84g7psi"]
 
-[ext_resource type="Texture2D" uid="uid://brb2hs8fsbfmy" path="res://Assets/CC_Assets/人物Assets/Adam_reading_16x16.png" id="1_gd7qm"]
+[ext_resource type="Script" path="res://book_reader.gd" id="1_kdyo7"]
+[ext_resource type="Texture2D" uid="uid://brb2hs8fsbfmy" path="res://Assets/CC_Assets/人物Assets/Adam_reading_16x16.png" id="2_wvcjp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mreux"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83dnu"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sc00c"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ajaba"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4a0ak"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(64, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6blg"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(80, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_caemg"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(96, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1c23"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(112, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6187"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(128, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_anl7f"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(144, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33esh"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(160, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_stjgi"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(176, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kk5m0"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(192, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y468v"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(208, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0wbq"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(224, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnxlx"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(240, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0v5e"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(256, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ol217"]
-atlas = ExtResource("1_gd7qm")
+atlas = ExtResource("2_wvcjp")
 region = Rect2(272, 0, 16, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_q43d6"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_lsg5q"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -136,16 +137,71 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_67k6u"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_snmiy"]
 radius = 6.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_55d27"]
+radius = 16.0312
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_q43d6")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2ejr"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_ov3qj"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="Book_reader" type="Node2D"]
+script = ExtResource("1_kdyo7")
+
+[node name="Book_reader" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Book_reader"]
+sprite_frames = SubResource("SpriteFrames_lsg5q")
 autoplay = "default"
-frame_progress = 0.197273
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book_reader"]
 position = Vector2(0, 8)
-shape = SubResource("CircleShape2D_67k6u")
+shape = SubResource("CircleShape2D_snmiy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_55d27")
+
+[node name="DialogueBox" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogueBox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -53.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_a2ejr")
+
+[node name="Text" type="Label" parent="DialogueBox/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Love you!"
+label_settings = SubResource("LabelSettings_ov3qj")
+
+[node name="Memory11" type="Marker2D" parent="."]
+position = Vector2(38, 9)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

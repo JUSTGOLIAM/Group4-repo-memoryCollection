@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Memory__Liam"
-run/main_scene="res://Scene/Home.tscn"
+run/main_scene="res://Scene/CC_Scene_/Home.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

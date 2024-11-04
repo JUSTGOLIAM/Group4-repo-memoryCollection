@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6ur8gk18akhe"]
+[gd_scene load_steps=10 format=3 uid="uid://b7ggsnomldcny"]
 
-[ext_resource type="Texture2D" uid="uid://cyssa8y6n11jt" path="res://人物动画/Adam_idle_anim_16x16.png" id="1_fh61i"]
+[ext_resource type="Texture2D" uid="uid://cyssa8y6n11jt" path="res://Assets/CC_Assets/人物Assets/Adam_idle_anim_16x16.png" id="1_fh61i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gaq0g"]
 atlas = ExtResource("1_fh61i")
