@@ -1,4 +1,4 @@
-extends "res://Script/player.gd"
+extends CharacterBody2D
 
 
 const SPEED = 300.0

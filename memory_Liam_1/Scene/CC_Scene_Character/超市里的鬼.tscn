@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnmgwpri3an6q"]
+[gd_scene load_steps=10 format=3 uid="uid://cope26aifp5vy"]
 
-[ext_resource type="Texture2D" uid="uid://c4il7stn2tj6p" path="res://人物动画/Characters_ghosts_48x48.png" id="1_0fmkm"]
+[ext_resource type="Texture2D" uid="uid://c4il7stn2tj6p" path="res://Assets/CC_Assets/人物Assets/Characters_ghosts_48x48.png" id="1_0fmkm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ge8ym"]
 atlas = ExtResource("1_0fmkm")
@@ -62,6 +62,6 @@ sprite_frames = SubResource("SpriteFrames_1g7mb")
 autoplay = "default"
 frame_progress = 0.862809
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
 shape = SubResource("CircleShape2D_25shw")

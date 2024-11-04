@@ -1,77 +1,96 @@
-[gd_scene load_steps=25 format=3 uid="uid://b852elx3ng11j"]
+[gd_scene load_steps=25 format=3 uid="uid://mk30noi1uf0c"]
 
-[ext_resource type="Texture2D" uid="uid://bhktqyb7i1m8v" path="res://Assets/CC_Assets/人物Assets/Cleaner_boy_clean_16x16.png" id="1_1rmob"]
-[ext_resource type="Script" path="res://Scene/fish_killer.gd" id="1_dcu5s"]
+[ext_resource type="Script" path="res://cleaner.gd" id="1_t3aii"]
+[ext_resource type="Texture2D" uid="uid://bhktqyb7i1m8v" path="res://Assets/CC_Assets/人物Assets/Cleaner_boy_clean_16x16.png" id="2_3wqra"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vxgp"]
+radius = 16.0312
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjolg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_g6t60"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3b28j"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(0, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ro2pk"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(16, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lekl"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(32, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xx1h"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(48, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p31yq"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(64, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrjs2"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(80, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmabe"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(96, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1y7v"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(112, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihcby"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(128, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pr17y"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(144, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxw2v"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(160, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_scc6u"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(176, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_raahw"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(192, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxt8h"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(208, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1di7"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(224, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ypvdn"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(240, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7pvn"]
-atlas = ExtResource("1_1rmob")
+atlas = ExtResource("2_3wqra")
 region = Rect2(256, 0, 16, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_yp3oi"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_kml2y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -130,45 +149,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5f6jh"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_en6dw"]
 radius = 5.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xdgfo"]
-radius = 16.0312
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1b3c"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="LabelSettings" id="LabelSettings_pt02q"]
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-
-[node name="Cleaner" type="CharacterBody2D"]
-script = ExtResource("1_dcu5s")
-dialogue = Array[String](["gdfzgz", "hdfb"])
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_yp3oi")
-autoplay = "default"
-frame_progress = 0.880677
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_5f6jh")
+[node name="Cleaner" type="Node2D"]
+script = ExtResource("1_t3aii")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_xdgfo")
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_6vxgp")
 
 [node name="DialogueBox" type="CanvasLayer" parent="."]
 visible = false
@@ -183,14 +174,27 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_h1b3c")
+theme_override_styles/panel = SubResource("StyleBoxFlat_xjolg")
 
 [node name="Text" type="Label" parent="DialogueBox/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Morning!"
-label_settings = SubResource("LabelSettings_pt02q")
+text = "Hello, gave me a fish!!!!"
+label_settings = SubResource("LabelSettings_g6t60")
 
 [node name="Memory11" type="Marker2D" parent="."]
 position = Vector2(38, 9)
+
+[node name="Cleaner" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cleaner"]
+sprite_frames = SubResource("SpriteFrames_kml2y")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cleaner"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_en6dw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
