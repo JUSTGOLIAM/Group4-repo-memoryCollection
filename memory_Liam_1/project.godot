@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Memory__Liam"
-run/main_scene="res://Scene/CC_Scene_/Home.tscn"
+run/main_scene="res://menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Script/icon.svg"
+
+[autoload]
+
+GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
 
 [dotnet]
 

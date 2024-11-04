@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cblcsshpkbfdd" path="res://Assets/CC_Assets/Room_Builder_16x16.png" id="1_dopcd"]
 [ext_resource type="Texture2D" uid="uid://8hsxgftlc65a" path="res://Assets/CC_Assets/16_Grocery_store.png" id="2_8lscq"]
-[ext_resource type="PackedScene" uid="uid://d3muxacdql6bg" path="res://Scene/CC_Scene_Character/卖肉的人.tscn" id="3_3meqv"]
-[ext_resource type="PackedScene" uid="uid://b0xhhp60on1nl" path="res://Scene/CC_Scene_Character/肉.tscn" id="4_4ob3a"]
+[ext_resource type="PackedScene" uid="uid://rk1y6mji221i" path="res://Scene/CC_Scene_Character/卖肉的人.tscn" id="3_3meqv"]
+[ext_resource type="PackedScene" path="res://Scene/CC_Scene_Character/肉.tscn" id="4_4ob3a"]
 [ext_resource type="PackedScene" uid="uid://c23gyh6jlj1w0" path="res://Scene/player.tscn" id="5_4njax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt6ws"]
@@ -9511,6 +9511,6 @@ polygon = PackedVector2Array(-145, 32, -14, 31, -12, -7, -83, -8, -82, -14, -68,
 [node name="Player" parent="." instance=ExtResource("5_4njax")]
 position = Vector2(-41, 61)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(0, 1)
 zoom = Vector2(4, 4)

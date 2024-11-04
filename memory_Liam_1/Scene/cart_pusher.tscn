@@ -77,7 +77,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Cart_pusher" type="Node2D"]
 script = ExtResource("1_mwhjy")
-dialogue = Array[String](["", "Cart Pusher: ", "Player: ", "Cart Pusher: "])
+dialogue = Array[String](["", "Cart Pusher: You lent me a hand once, helping pick up a whole load of groceries.", "Player: You seemed like you could use the help.", "Cart Pusher: It meant more than you know—small kindnesses matter."])
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 

@@ -41,11 +41,11 @@ func _process(delta):
 
 var playernearby = false
 
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		$DialogueBox.show()
 		playernearby = true
-
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
