@@ -19,6 +19,10 @@ config/icon="res://Script/icon.svg"
 
 GlobalAudioStreamPlayer="*res://audio_stream_player.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="Memory__Liam"
